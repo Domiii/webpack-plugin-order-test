@@ -21,6 +21,9 @@ module.exports = function (webpack, modSource) {
   const plugins = [
     new webpack.DefinePlugin({
       'A.B.C': JSON.stringify('good!')
+    }),
+    new webpack.EnvironmentPlugin({
+      NODE_ENV: mode
     })
   ];
 

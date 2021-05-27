@@ -1,5 +1,5 @@
 function f() {
-  return A.B.C;
+  return [process.env.NODE_ENV, A.B.C];
 }
 
 console.log(`${__filename}:`, f.toString().includes('good!') ? 'good' : 'bad');

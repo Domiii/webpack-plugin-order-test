@@ -4,7 +4,7 @@ Run `npm start` to reproduce the problem:
 1. You see that if the babel plugin modifies the code, `webpack.DefinePlugin` fails to make the replacements.
 1. Also note that v4 and v5 have the same issue.
 
-The final output indicates that replacement worked if no modification took place. It looks something like this:
+The final output (or a manual inspection of the output files in `dist`) indicate that replacement worked if no modification took place. It looks something like this:
 
 > app-5.js: good
 > 

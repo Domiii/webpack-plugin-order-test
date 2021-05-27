@@ -1,0 +1,22 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "i": "yarn install && cd v4 && yarn install && cd ../v5 && yarn install",
+    "v4": "cd v4 && node ./node_modules/webpack/bin/webpack.js",
+    "v5": "cd v5 && node ./node_modules/webpack/bin/webpack.js",
+    "start": "npm run v4 && npm run v5 && node dist/app-5.js && node dist/app-5-modded.js && node dist/app-4.js && node dist/app-4-modded.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@dbux/babel-plugin": "^0.4.2",
+    "@dbux/cli": "^0.4.2",
+    "@dbux/runtime": "^0.4.2",
+    "babel-loader": "^8.2.2",
+    "webpack-node-externals": "^3.0.0"
+  }
+}
